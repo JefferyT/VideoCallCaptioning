@@ -10,7 +10,6 @@ import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import {Route, Switch, NavLink, Redirect} from "react-router-dom";
 import Badge from 'react-bootstrap/Badge';
-import Card from 'react-bootstrap/Card';
  
  
 class App extends Component {
@@ -85,7 +84,7 @@ class MainPage extends Component {
       <div>
         <Container>
           <Row>
-            <Col md="8">Testing</Col>
+            <Col md="8"><Video /></Col>
             <Col>
               <Row>Transcription</Row>
               <Row><MessageList /></Row>
@@ -123,10 +122,10 @@ class NavBar extends Component {
 class Video extends Component {
   render() {
     return(
-      <div>
-        
+      <div className="video-container">
+        <canvas id="video-canvas"></canvas>
+        <canvas id="user-video"></canvas>
       </div>
- 
     )
   }
 }
