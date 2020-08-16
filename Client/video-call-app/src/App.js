@@ -10,6 +10,7 @@ import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
 import {Route, Switch, NavLink, Redirect} from "react-router-dom";
 import Badge from 'react-bootstrap/Badge';
+import Video from './Video';
  
  
 class App extends Component {
@@ -119,16 +120,6 @@ class NavBar extends Component {
   }
 }
  
-class Video extends Component {
-  render() {
-    return(
-      <div className="video-container">
-        <canvas id="video-canvas"></canvas>
-        <canvas id="user-video"></canvas>
-      </div>
-    )
-  }
-}
  
 class Transcription extends Component {
   render() {
