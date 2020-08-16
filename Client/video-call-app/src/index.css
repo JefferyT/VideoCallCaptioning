@@ -1,0 +1,17 @@
+#video-canvas {
+  width: 540px;
+  height: 360px;
+  border:1px solid #000;
+}
+
+#user-video {
+  width: 120px;
+  height: 60px;
+  border: 1px solid #000;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
