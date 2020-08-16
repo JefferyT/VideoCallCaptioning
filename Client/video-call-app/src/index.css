@@ -1,17 +1,37 @@
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-background {
+  background-color: #E9ECEF;
+}
+
+.header {
+  text-align: center;
+  background-color:#007BFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
 #video-canvas {
   width: 540px;
   height: 360px;
   border:1px solid #000;
+  margin-top: 40px;
 }
 
 #user-video {
   width: 120px;
-  height: 60px;
+  height: 80px;
   border: 1px solid #000;
+  margin-top: 20px;
 }
 
-.video-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+#message-container {
+  width: 380px;
+  height: 50px;
 }
+

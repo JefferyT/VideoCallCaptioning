@@ -86,8 +86,8 @@ class MainPage extends Component {
           <Row>
             <Col md="8"><Video /></Col>
             <Col>
-              <Row>Transcription</Row>
-              <Row><MessageList /></Row>
+              <Row className="text-background"><Transcription /></Row>
+              <Row className="text-background"><MessageList /></Row>
             </Col>
           </Row>
         </Container>
@@ -131,42 +131,80 @@ class Video extends Component {
 }
  
 class Transcription extends Component {
-  render() {
-    return(
-      <div>
-        <h1></h1>
-      </div>
- 
-    )
+    render() {
+      let name1 = 'Thomas';
+      let name2 = 'Varun';
+      let msg1 = 'Hello, I wanted to ask you about for loops';
+      let msg2 = 'Great. What is your question? ';
+      return(
+        <div>
+          <p className="header">Transcription</p>
+          <Jumbotron fluid id="jumbo">
+            <Container id="message-container">
+              <Row>
+                <Col>
+                  <Form.Text className="text-muted">
+                    {name1}
+                  </Form.Text>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Badge variant="light">{msg1}</Badge>
+                </Col>
+              </Row>
+              <br></br>
+
+              <Row>
+                <Col>
+                  <Form.Text className="text-muted">
+                    {name2}
+                  </Form.Text>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Badge variant="light">{msg2}</Badge>
+                </Col>
+              </Row>
+            </Container>
+          </Jumbotron>
+        </div>
+        
+      )
   }
 }
  
 class MessageList extends Component {
   render() {
     return (
-      <Jumbotron fluid id="jumbo">
-        <Container id="messageContainer">
-          <Row id="row1">
-            <Col id="col1">
-              <Badge variant="primary">Hi Thomas!</Badge>{' '}
-            </Col>
-            <Col id="Col3"></Col>
-          </Row>
-          <Row>
-            <Col id="Col3"></Col>
-            <Col id="col1">
-              <Badge variant="light">Hey, give me a second.</Badge>{' '}
-            </Col>
-          </Row>
+      <div>
+        <p className="header">Chat</p>
+        <Jumbotron fluid id="jumbo">
+          <Container id="message-container">
+            <Row id="row1">
+              <Col id="col1">
+                <Badge variant="primary">Hi Thomas!</Badge>
+              </Col>
+              <Col id="Col3"></Col>
+            </Row>
+            <Row>
+              <Col id="Col3"></Col>
+              <Col id="col1">
+                <Badge variant="light">Hey, give me a second.</Badge>
+              </Col>
+            </Row>
 
-          <br></br>
-          <Form.Group controlId="formRoomID">
-            <Form.Control type="text" placeholder="Enter your message" />
-          </Form.Group>
-        </Container>
+            <br></br>
+            <Form.Group controlId="formRoomID">
+              <Form.Control type="text" placeholder="Enter your message" />
+            </Form.Group>
+          </Container>
 
-        <Container></Container>
-      </Jumbotron>
+          <Container></Container>
+        </Jumbotron>
+      </div>
+      
     );
   }
 }
