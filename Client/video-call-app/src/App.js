@@ -11,7 +11,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Route, Switch, NavLink, Redirect} from "react-router-dom";
 import Badge from 'react-bootstrap/Badge';
  
- 
 class App extends Component {
   render() {
     return(
